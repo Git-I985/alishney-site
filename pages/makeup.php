@@ -2,71 +2,55 @@
 
 $makeup = [
     [
-        "id" => 1,
-        "name"        => "Помада",
-        "img"         => "./images/4.png",
-        "description" => "Помада раз два три Помада раз два три Помада раз два три",
-        "rating"      => 0,
-        "price"       => "2",
-        "category" => 'face'
-    ],
-    [
-        "id" => 2,
-        "name"        => "Помада",
-        "img"         => "./images/4.png",
-        "description" => "Помада раз два три Помада раз два три Помада раз два три",
+        "name"        => "Givenchy",
+        "img"         => "./images/6.png",
+        "description" => "Бальзам для губ Le Rose Perfecto от Givenchy",
         "rating"      => 5,
-        "price"       => "2",
-        "category" => 'eyes'
+        "price"       => "1 999",
     ],
     [
-        "id" => 3,
-        "name"        => "Помада",
-        "img"         => "./images/4.png",
-        "description" => "Помада раз два три Помада раз два три Помада раз два три",
-        "rating"      => 2,
-        "price"       => "2",
-        "category" => 'eyes'
+        "name"        => "Revolution Makeup",
+        "img"         => "./images/7.png",
+        "description" => "REVOLUTION x Rachel Leary Палетка Goddess on the go",
+        "rating"      => 5,
+        "price"       => "1 105",
     ],
     [
-        "id" => 4,
-        "name"        => "Помада",
-        "img"         => "./images/4.png",
-        "description" => "Помада раз два три Помада раз два три Помада раз два три",
-        "rating"      => 2,
-        "price"       => "2",
-        "category" => 'eyes'
+        "name"        => "Too Faced",
+        "img"         => "./images/8.jpg",
+        "description" => "Diamond light хайлайтер",
+        "rating"      => 4,
+        "price"       => "3 890",
     ],
     [
-        "id" => 5,
-        "name"        => "Помада",
-        "img"         => "./images/4.png",
-        "description" => "Помада раз два три Помада раз два три Помада раз два три",
-        "rating"      => 2,
-        "price"       => "2",
-        "category" => 'brushes'
+        "name"        => "Lancôme",
+        "img"         => "./images/9.jpg",
+        "description" => "Hypnose Volume-а-Porter тушь для ресниц",
+        "rating"      => 5,
+        "price"       => "3 070",
     ],
     [
-        "id" => 6,
-        "name"        => "Помада",
-        "img"         => "./images/4.png",
-        "description" => "Помада раз два три Помада раз два три Помада раз два три",
-        "rating"      => 2,
-        "price"       => "2",
-        "category" => 'palettes'
+        "name"        => "Shiseido",
+        "img"         => "./images/10.jpg",
+        "description" => "Shiseido Synchro Skin Glow Тональное средство-флюид с эффектом естественного сияния",
+        "rating"      => 3,
+        "price"       => "4 100",
     ],
     [
-        "id" => 7,
-        "name"        => "Помада",
-        "img"         => "./images/4.png",
-        "description" => "Помада раз два три Помада раз два три Помада раз два три",
-        "rating"      => 2,
-        "price"       => "2",
-        "category" => 'face'
+        "name"        => "Clarins",
+        "img"         => "./images/11.jpg",
+        "description" => "Clarins Ever Matte Матирующая рассыпчатая пудра",
+        "rating"      => 5,
+        "price"       => "3 700",
     ],
-];
-
-?>
+    [
+        "name"        => "Urban Decay",
+        "img"         => "./images/12.jpg",
+        "description" => "Urban Decay Naked 3 Палетка теней для век",
+        "rating"      => 5,
+        "price"       => "5 380",
+    ],
+]; ?>
 
 <div class="makeup-cards">
     <?php foreach ($makeup  as $item) { ?>
@@ -92,4 +76,3 @@ $makeup = [
     <?php } ?>
 
 </div>
-
