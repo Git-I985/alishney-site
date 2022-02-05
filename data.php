@@ -1,0 +1,75 @@
+<?php
+
+$categories = [
+    ["id" => 1, "name" => "Губы"],
+    ["id" => 2, "name" => "Глаза"],
+    ["id" => 3, "name" => "Кисти"],
+    ["id" => 4, "name" => "Палетки"],
+    ["id" => 5, "name" => "Лицо"],
+];
+
+$makeup = [
+    [
+        "id"          => 1,
+        "name"        => "Givenchy",
+        "img"         => "./images/6.png",
+        "description" => "Бальзам для губ Le Rose Perfecto от Givenchy",
+        "rating"      => 5,
+        "price"       => 1999,
+        "category_id" => 1,
+    ],
+    [
+        "id"          => 2,
+        "name"        => "Revolution Makeup",
+        "img"         => "./images/7.png",
+        "description" => "REVOLUTION x Rachel Leary Палетка Goddess on the go",
+        "rating"      => 5,
+        "price"       => 1105,
+        "category_id" => 4,
+    ],
+    [
+        "id"          => 3,
+        "name"        => "Too Faced",
+        "img"         => "./images/8.jpg",
+        "description" => "Diamond light хайлайтер",
+        "rating"      => 4,
+        "price"       => 3890,
+        "category_id" => 5,
+    ],
+    [
+        "id"          => 4,
+        "name"        => "Lancôme",
+        "img"         => "./images/9.jpg",
+        "description" => "Hypnose Volume-а-Porter тушь для ресниц",
+        "rating"      => 5,
+        "price"       => 3070,
+        "category_id" => 2,
+    ],
+    [
+        "id"          => 5,
+        "name"        => "Shiseido",
+        "img"         => "./images/10.jpg",
+        "description" => "Shiseido Synchro Skin Glow Тональное средство-флюид с эффектом естественного сияния",
+        "rating"      => 3,
+        "price"       => 4100,
+        "category_id" => 5,
+    ],
+    [
+        "id"          => 6,
+        "name"        => "Clarins",
+        "img"         => "./images/11.jpg",
+        "description" => "Clarins Ever Matte Матирующая рассыпчатая пудра",
+        "rating"      => 5,
+        "price"       => 3700,
+        "category_id" => 5,
+    ],
+    [
+        "id"          => 7,
+        "name"        => "Urban Decay",
+        "img"         => "./images/12.jpg",
+        "description" => "Urban Decay Naked 3 Палетка теней для век",
+        "rating"      => 5,
+        "price"       => 5380,
+        "category_id" => 2,
+    ],
+];

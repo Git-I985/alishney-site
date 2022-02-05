@@ -29,6 +29,13 @@ a {
     transition: all .1s ease;
 }
 
+.header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 a:hover {
     color: var(--color-pink);
 }
@@ -94,6 +101,24 @@ a:hover {
 .header__nav__basket {
     margin: 0 1rem;
     font-size: 1.5rem;
+    position: relative;
+}
+
+.basket-items-count {
+    background-color: var(--color-pink);
+    color: white;
+    position: absolute;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: -50%;
+    font-size: 1rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    text-align: center;
+    vertical-align: center;
 }
 
 .header__nav__basket i {

@@ -130,8 +130,7 @@ main {
     filter: opacity(0.7);
     margin: 0 auto;
 }
-
-.makeup-item-card-buy-button:hover {
+.makeup-item-card-buy-button:hover,.makeup-item-card-buy-button.active {
     filter: none;
     color: white;
     background-color: var(--color-pink);

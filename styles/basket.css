@@ -1,3 +1,126 @@
 main {
-    padding: 0 1.2rem;
+    padding: 4rem 1.2rem;
+}
+
+th, td {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+thead {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+thead td:last-child {
+    text-align: center;
+}
+
+.basket-items {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.basket-item-img img {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.basket-item-count-value {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.basket-item-count-action {
+    font-size: 1rem;
+    margin: 0 1rem;
+    font-weight: bold;
+    background-color: var(--color-pink);
+    padding: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    color: white;
+}
+
+.basket-item-count-action:hover {
+    color: white;
+    filter: brightness(0.8) contrast(2);
+}
+
+.basket-item-count-action i {
+    color: inherit;
+}
+.basket-item-name {
+    font-size: 1.2rem;
+}
+.basket-item-price {
+    font-size: 1.2rem;
+}
+.basket-item-price, .basket-item-count {
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        box-shadow: 1px 5px 18px 4px #f1f1f1;
+        border-radius: 1rem;
+        border: 1px solid rgb(237 237 237);
+        padding: 1rem;
+    }
+
+    td {
+        text-align: center;
+    }
+    .basket-item-name {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    .basket-item-category {
+        display: none;
+    }
+    .basket-item-price {
+        font-weight: bold;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+    .basket-item-count-action {
+        margin: 0;
+        padding: 1.5rem;
+        background-color: rgb(255 66 82);
+    }
+
+    .basket-item-count .basket-item-count-action:first-child {
+        border-radius: 1rem 0 0 1rem;
+    }
+    .basket-item-count .basket-item-count-action:last-child {
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .basket-item-count {
+        display: flex;
+        justify-content: center;
+    }
+    .basket-item-count-value {
+        background-color: var(--color-pink);
+
+        display: flex;
+        padding: 1rem 2rem;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
 }

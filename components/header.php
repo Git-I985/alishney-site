@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $basket_items_count = count($_SESSION['basket']);
+?>
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -34,7 +39,12 @@
         </div>
         <div class="header__nav__right">
             <input class="header__nav__search" type="text" placeholder="Поиск по сайту">
-            <a class="header__nav__basket" href="./?page=basket" title="Корзина"><i class="fas fa-shopping-cart"></i></a>
+            <a class="header__nav__basket" href="./?page=basket" title="Корзина">
+                <?php if($basket_items_count) { ?>
+                    <span class="basket-items-count"><?= $basket_items_count ?></span>
+                <?php } ?>
+                <i class="fas fa-shopping-cart"></i>
+            </a>
         </div>
     </nav>
 </header>
