@@ -2,60 +2,75 @@
 
 $makeup = [
     [
+        "id" => 1,
         "name"        => "Помада",
         "img"         => "./images/4.png",
         "description" => "Помада раз два три Помада раз два три Помада раз два три",
         "rating"      => 0,
         "price"       => "2",
+        "category" => 'face'
     ],
     [
+        "id" => 2,
         "name"        => "Помада",
         "img"         => "./images/4.png",
         "description" => "Помада раз два три Помада раз два три Помада раз два три",
         "rating"      => 5,
         "price"       => "2",
+        "category" => 'eyes'
     ],
     [
+        "id" => 3,
         "name"        => "Помада",
         "img"         => "./images/4.png",
         "description" => "Помада раз два три Помада раз два три Помада раз два три",
         "rating"      => 2,
         "price"       => "2",
+        "category" => 'eyes'
     ],
     [
+        "id" => 4,
         "name"        => "Помада",
         "img"         => "./images/4.png",
         "description" => "Помада раз два три Помада раз два три Помада раз два три",
         "rating"      => 2,
         "price"       => "2",
+        "category" => 'eyes'
     ],
     [
+        "id" => 5,
         "name"        => "Помада",
         "img"         => "./images/4.png",
         "description" => "Помада раз два три Помада раз два три Помада раз два три",
         "rating"      => 2,
         "price"       => "2",
+        "category" => 'brushes'
     ],
     [
+        "id" => 6,
         "name"        => "Помада",
         "img"         => "./images/4.png",
         "description" => "Помада раз два три Помада раз два три Помада раз два три",
         "rating"      => 2,
         "price"       => "2",
+        "category" => 'palettes'
     ],
     [
+        "id" => 7,
         "name"        => "Помада",
         "img"         => "./images/4.png",
         "description" => "Помада раз два три Помада раз два три Помада раз два три",
         "rating"      => 2,
         "price"       => "2",
+        "category" => 'face'
     ],
-]; ?>
+];
+
+?>
 
 <div class="makeup-cards">
-
     <?php foreach ($makeup  as $item) { ?>
-    <div class="makeup-item-card">
+    <div class="makeup-item-card" data-item-id="<?= $item['id'] ?>">
         <div class="makeup-item-card-img">
             <img src="<?= $item["img"] ?>" alt="<?= $item["name"] ?>">
         </div>
