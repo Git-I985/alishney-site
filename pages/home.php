@@ -11,32 +11,38 @@
 
 <section class="section__face">
     <h2>Лицо</h2>
-    <p>The perfect face starts with a flawless complexion. Find all your face makeup needs right here, from face primer
-        to foundation, to concealers and blush, or powder comp home-page-design.ipg shades and a special contour and
-        highlight stick.</p>
-    <a href="?page=makeup">View makeup <i class="fas fa-arrow-right"></i></a>
+    <p>Идеальное лицо начинается с безупречного цвета. Найдите все, что вам нужно для макияжа лица, прямо здесь, от
+        праймера для до тонального крема, консилеров и румян или пудры и хайлайтера.</p>
+    <a href="?page=makeup&filter_category_id=5">Посмотреть товары<i class="fas fa-arrow-right"></i></a>
 </section>
+
 <section class="section__eyes">
     <h2>Глаза</h2>
-    <p>Your eyes are the windows to your soul so why not dress them up. From pencil to liquid eyeliners or brow definers
-        and shadow palettes, find all the right eye accessories here.</p>
-    <a href="?page=makeup">View makeup <i class="fas fa-arrow-right"></i></a>
+    <p>Ваши глаза - это отражение вашей души, так почему бы не подкрасить их? От карандаша до подводок для глаз или
+        средств для контура бровей
+        и палитры теней, найдите здесь всю подходящую косметику для глаз.</p>
+    <a href="?page=makeup&filter_category_id=2">Посмотреть товары<i class="fas fa-arrow-right"></i></a>
 </section>
+
 <section class="section__lips">
     <h2>Губы</h2>
-    <p>A beautiful lip is the finishing touch to any makeup look. Go subtle with tinted lip balms and sheer lipsticks,
-        or go bold with creamy lipsticks in classic or matte finishes.</p>
-    <a href="?page=makeup">View makeup <i class="fas fa-arrow-right"></i></a>
+    <p>Красивые губы - это завершающий штрих любого макияжа. Станьте более утонченны с бальзамами для губ, глянцевыми
+        помадами
+        или выразительнее с классическими помадами или помадами в матовом исполнении.</p>
+    <a href="?page=makeup&filter_category_id=1">Посмотреть товары<i class="fas fa-arrow-right"></i></a>
 </section>
+
 <section class="section__palettes">
     <h2>Палетки</h2>
-    <p>Mix and match different shades for the perfect color to finish any makeup look. Every palette from face to eyes
-        is simply made to blend to any type of skin. Buy any of our palettes and have fun creating.</p>
-    <a href="?page=makeup">View makeup <i class="fas fa-arrow-right"></i></a>
+    <p>Смешивайте и сочетайте различные оттенки для идеального цвета, чтобы завершить любой макияж. Каждая палетка
+        просто создана для того, чтобы сочетаться с любым типом кожи. Купите любую из наших палеток и получайте
+        удовольствие от творчества.</p>
+    <a href="?page=makeup&filter_category_id=4">Посмотреть товары<i class="fas fa-arrow-right"></i></a>
 </section>
+
 <section class="section__brushes">
     <h2>Кисти</h2>
-    <p>These brushes are synthetic, soft to the touch with expert performance. Whether you're a makeup newbie or a
-        beauty junkie, these brushes are easy to use and hard to put down.</p>
-    <a href="?page=makeup">View makeup <i class="fas fa-arrow-right"></i></a>
+    <p>Наши кисти синтетические, мягкие на ощупь и отличаются высоким качеством. Являетесь ли вы новичком в макияже или
+        профессионалом, эти кисти просты в использовании и от них трудно оторваться.</p>
+    <a href="?page=makeup&filter_category_id=3">Посмотреть товары<i class="fas fa-arrow-right"></i></a>
 </section>

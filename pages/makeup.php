@@ -72,7 +72,30 @@ $makeup = [
         "price"       => "5 380",
         "category_id"    => 2,
     ],
-]; ?>
+];
+$filter_category_id = null;
+if(isset($_GET['filter_category_id'])) {
+    $filter_category_id = (int) $_GET['filter_category_id'];
+    $makeup = array_filter($makeup, function ($item) use ($filter_category_id) {
+        return $item['category_id'] === $filter_category_id;
+    });
+};
+?>
+
+<div class="page-header">
+    <div class="page-header-banner">
+        <h1>Идеальное лицо начинается с <br> безупречного тонального крема.</h1>
+    </div>
+    <div class="items-filters">
+        <a class="<?= !$filter_category_id ? 'active-filter' : '' ?>" href="?page=makeup">Все товары</a>
+        <?php
+            foreach ($categories as $category) {
+            $active_class = $filter_category_id ? $category['id'] === $filter_category_id ? 'active-filter' : '' : '';
+        ?>
+            <a class="<?= $active_class ?>" href="?page=makeup&filter_category_id=<?= $category['id'] ?>"><?= $category['name'] ?></a>
+        <?php } ?>
+    </div>
+</div>
 
 <div class="makeup-cards">
     <?php
