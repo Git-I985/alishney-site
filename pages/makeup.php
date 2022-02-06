@@ -1,7 +1,6 @@
 <?php
 
 
-
 $filter_category_id = null;
 
 if (isset($_GET['filter_category_id'])) {
@@ -27,7 +26,7 @@ session_start();
             ?>
             <a class="<?= $active_class ?>"
                href="?page=makeup&filter_category_id=<?= $category['id'] ?>"><?= $category['name'] ?></a>
-        <?php
+            <?php
         } ?>
     </div>
 </div>
@@ -35,10 +34,10 @@ session_start();
 <div class="makeup-cards">
     <?php
     foreach ($makeup as $item) {
-        $item_in_basket   = in_array($item['id'], $_SESSION['basket']);
-        $buy_button_class = $item_in_basket ? 'active' : '';
-        $buy_button_text  = $item_in_basket ? 'Перейти в корзину' : 'В корзину';
-        $buy_button_url   = $item_in_basket ? "?page=basket" : "?page=basket_manager&action=add&item_id={$item['id']}";
+        $item_in_basket       = in_array($item['id'], $_SESSION['basket']);
+        $buy_button_class     = $item_in_basket ? 'active' : '';
+        $buy_button_url       = $item_in_basket ? "?page=basket" : "?page=basket_manager&action=add&item_id={$item['id']}";
+        $item_count_in_basket = array_count_values($_SESSION['basket'])[$item['id']] ?? 1;
         ?>
         <div class="makeup-item-card" data-item-id="<?= $item['id'] ?>">
             <div class="makeup-item-card-img">
@@ -56,9 +55,22 @@ session_start();
                     ?>
                 </p>
                 <p class="makeup-item-card-price"><?= $item["price"] ?> &#8381;</p>
-                <a class="makeup-item-card-buy-button <?= $buy_button_class ?>" href=<?= $buy_button_url ?>>
-                    <?= $buy_button_text ?>
-                </a>
+                <a class="makeup-item-card-buy-button"
+                   data-href="./api/basket/add/<?= $item['id'] ?>"
+                   style="display: <?= $item_in_basket ? 'none' : 'block' ?>"
+                >В корзину</a>
+                <div class="makeup-item-card-already-in-basket-controls"
+                     style="display: <?= $item_in_basket ? 'flex' : 'none' ?>">
+                    <a class="basket-item-count-action"
+                       data-href="./api/basket/remove/<?= $item['id'] ?>">
+                        <i class="fas fa-minus"></i>
+                    </a>
+                    <div class="basket-item-count-value"><?= $item_count_in_basket ?></div>
+                    <a class="basket-item-count-action"
+                       data-href="./api/basket/add/<?= $item['id'] ?>">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <?php

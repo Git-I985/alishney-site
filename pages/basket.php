@@ -24,20 +24,21 @@ if ( ! count($_SESSION['basket'])) { ?>
         global $categories;
         $item = getItemById($item_id, $makeup);
         ?>
-        <tr>
+        <tr class="basket-item" data-item-data='<?= json_encode($item) ?>'>
             <td class="basket-item-img"><img src="<?= $item['img'] ?>"></td>
             <td class="basket-item-name"><?= $item['name'] ?></td>
             <td class="basket-item-description"><?= $item['description'] ?></td>
-            <td class="basket-item-price"><?= $item['price'] * $item_count ?> &#8381;</td>
+            <td class="basket-item-price"><?= $item['price'] ?> &#8381;</td>
             <td class="basket-item-count">
                 <a class="basket-item-count-action"
-                   href="?page=basket_manager&action=remove&item_id=<?= $item['id'] ?>">
+                   data-href="./api/basket/remove/<?= $item['id'] ?>">
                     <i class="fas fa-minus"></i>
                 </a>
                 <div class="basket-item-count-value">
                     <?= $item_count ?>
                 </div>
-                <a class="basket-item-count-action" href="?page=basket_manager&action=add&item_id=<?= $item['id'] ?>">
+                <a class="basket-item-count-action"
+                   data-href="./api/basket/add/<?= $item['id'] ?>">
                     <i class="fas fa-plus"></i>
                 </a>
             </td>
@@ -49,13 +50,20 @@ if ( ! count($_SESSION['basket'])) { ?>
         <td></td>
         <td></td>
         <td>Итог: </td>
-        <td><?php
-            $total = 0;
-            foreach (array_count_values($_SESSION['basket']) as $item => $count) {
-                $total += getItemById($item_id, $makeup)['price'] * $count;
-            }
-            echo $total;
-            ?> &#8381;</td>
+        <td class="basket-total-price">
+            <div class="basket-total-price-value">
+                <?php
+                $total = 0;
+                foreach (array_count_values($_SESSION['basket']) as $item => $count) {
+                    $total += getItemById($item, $makeup)['price'] * $count;
+                }
+                echo $total;
+                ?>
+            </div>
+            <div class="basket-total-price-currency">
+                &#8381;
+            </div>
+        </td>
     </tr>
     </tbody>
 </table>

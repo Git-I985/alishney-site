@@ -25,6 +25,8 @@
     </div>
 </footer>
 <p style="text-align: center; margin-bottom: 4rem;">Алина Шнейдер 2022 &copy;</p>
-</body>
 
+<script src="./scripts/common.js"></script>
+<script src="./scripts/<?= $page ?>.js"></script>
+</body>
 </html>

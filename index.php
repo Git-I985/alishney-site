@@ -16,17 +16,7 @@ if ( ! file_exists($page_template)) {
 }
 
 include './data.php';
-
-function getItemById(int $id, array $items)
-{
-    foreach ($items as $item) {
-        if ($id == $item["id"]) {
-            return $item;
-        }
-    }
-
-    return false;
-}
+include './utils.php';
 
 ?>
 
