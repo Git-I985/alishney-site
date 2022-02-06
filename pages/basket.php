@@ -1,8 +1,8 @@
 <?php
 
 if ( ! count($_SESSION['basket'])) { ?>
-    <h1>Ваша корзина пуста!</h1>
-    <a href="?page=makeup">Вперед за покупками!</a>
+    <h1 style="text-align: center; margin: 3rem auto; margin-bottom: 1rem">Ваша корзина пуста!</h1>
+    <a href="?page=makeup" style="text-align: center; display: block; font-size: 1.3rem; color: var(--color-pink)">Вперед за покупками!</a>
     <?php
     die();
 } ?>
@@ -49,8 +49,9 @@ if ( ! count($_SESSION['basket'])) { ?>
         <td></td>
         <td></td>
         <td></td>
-        <td>Итог: </td>
+        <td></td>
         <td class="basket-total-price">
+            Итог:&nbsp;&nbsp;&nbsp;
             <div class="basket-total-price-value">
                 <?php
                 $total = 0;

@@ -1,7 +1,7 @@
 
 const setHeaderBasketIconItemsCount = (count) => {
     const headerBasketIconItemsCountBadge  = document.querySelector('.header span.basket-items-count');
-    if(count === 0) return headerBasketIconItemsCountBadge.remove()
+    headerBasketIconItemsCountBadge.style.display = count === 0 ? 'none' : 'flex';
     headerBasketIconItemsCountBadge.innerHTML = count;
 }
 

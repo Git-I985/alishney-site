@@ -41,6 +41,11 @@ const initBasketItemsCountActions = () => {
                                 setHeaderBasketIconItemsCount(getHeaderBasketIconItemsCount() - 1)
                                 break;
                         }
+
+                        if(document.querySelectorAll('table tbody tr').length < 2) {
+                            window.location.href = '?page=makeup'
+                        }
+
                     })
                 })
         })

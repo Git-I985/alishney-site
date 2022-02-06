@@ -1,6 +1,7 @@
 <?php
-    session_start();
-    $basket_items_count = count($_SESSION['basket']);
+
+session_start();
+$basket_items_count = count($_SESSION['basket']);
 ?>
 
 <!doctype html>
@@ -27,7 +28,11 @@
             </a>
             <div class="header__nav__pages">
                 <?php
-                $header_pages = ['home' => 'Главная', 'makeup' => 'Косметика', 'contact' => 'Контакты', 'about' => 'О нас'];
+                $header_pages = ['home'    => 'Главная',
+                                 'makeup'  => 'Косметика',
+                                 'contact' => 'Контакты',
+                                 'about'   => 'О нас',
+                ];
                 foreach ($header_pages as $site_page => $site_page_name) {
                     $active_page_class = $site_page === $page ? 'header__nav__link__active' : ''
                     ?>
@@ -40,9 +45,7 @@
         <div class="header__nav__right">
             <input class="header__nav__search" type="text" placeholder="Поиск по сайту">
             <a class="header__nav__basket" href="./?page=basket" title="Корзина">
-                <?php if($basket_items_count) { ?>
-                    <span class="basket-items-count"><?= $basket_items_count ?></span>
-                <?php } ?>
+                <span class="basket-items-count" style="display: <?= $basket_items_count ? 'flex' : 'none' ?>"><?= $basket_items_count ?></span>
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>

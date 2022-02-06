@@ -33,6 +33,7 @@ thead td:last-child {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    user-select: none;
 }
 
 .basket-item-count-value {
@@ -67,8 +68,41 @@ thead td:last-child {
 .basket-item-price {
     font-size: 1.2rem;
 }
+
 .basket-item-price, .basket-item-count {
     white-space: nowrap;
+}
+
+.basket-total-price {
+    display: flex;
+    justify-content: center;
+}
+
+.basket-total-price-currency {
+    margin-left: 1rem;
+}
+
+tbody tr:last-child {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.basket-table-footer a {
+    display: block;
+    width: 100%;
+    margin: 3rem auto;
+    text-align: center;
+    background-color: var(--color-pink);
+    color: white;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.basket-table-footer a:hover {
+    filter: brightness(.9) contrast(2);
 }
 
 @media (max-width: 900px) {
@@ -91,6 +125,17 @@ thead td:last-child {
     td {
         text-align: center;
     }
+
+    tr:last-child {
+        flex-direction: row;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    tr:last-child > td:nth-last-child(n+2) {
+        display: none;
+    }
+
     .basket-item-name {
         font-weight: bold;
         font-size: 1.3rem;
