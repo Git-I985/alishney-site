@@ -1,0 +1,81 @@
+section.about-banner {
+    border-bottom: 1rem solid var(--color-pink);
+    background-image: url("../images/about-banner.jpeg");
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.about-banner-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(255 140 133 / 50%);
+    backdrop-filter: contrast(0.6);
+    color: white;
+}
+
+.about-banner-content h1 {
+    background-color: var(--color-gray-1);
+    padding: 2rem;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.about-main {
+    display: flex;
+}
+
+.about-main-content h2 {
+    color: var(--color-pink);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about-main-gallery {
+    min-width: 60%;
+}
+
+.about-main {
+    padding: 3rem 0;
+}
+
+.about-main-content {
+    padding: 2rem;
+}
+
+.about-main-content p {
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 1rem;
+}
+
+.column img {
+    margin-top: 1rem;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
