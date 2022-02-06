@@ -18,7 +18,12 @@ $basket_items_count = count($_SESSION['basket']);
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-<header class="header">
+
+<div class="header-nav-menu-toggler">
+    <i class="fas fa-bars"></i>
+</div>
+
+<header class="header header__mobile">
     <nav class="header__nav">
         <div class="header__nav__left">
             <a href="./?page=home">
@@ -26,6 +31,9 @@ $basket_items_count = count($_SESSION['basket']);
                     Alishney Cosmetic Store
                 </div>
             </a>
+            <div class="header-search-mobile">
+                <input class="header__nav__search__mobile" type="text" placeholder="Поиск по сайту">
+            </div>
             <div class="header__nav__pages">
                 <?php
                 $header_pages = ['home'    => 'Главная',

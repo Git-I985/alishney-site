@@ -31,9 +31,11 @@ a {
 
 .header {
     background-color: white;
-    position: sticky;
+    position: fixed;
+    width: 100%;
+    max-width: 1440px;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 a:hover {
@@ -88,7 +90,8 @@ a:hover {
     color: var(--color-pink);
 }
 
-.header__nav__search,.header__nav__search:focus,.header__nav__search:active {
+.header__nav__search,.header__nav__search:focus,.header__nav__search:active,
+.header__nav__search__mobile,.header__nav__search__mobile:focus,.header__nav__search__mobile:active {
     padding: .4rem .8rem;
     border-radius: .4rem;
     border: 1px solid var(--color-gray-2);
@@ -181,6 +184,23 @@ footer button i, footer i {
     color: var(--color-gray-3);
 }
 
+.header-search-mobile {
+    display: none;
+}
+
+.header-nav-menu-toggler {
+    text-align: end;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    padding: 1rem;
+    background-color: white;
+}
+
 @media (max-width: 800px) {
     footer, .footer__right label {
         flex-direction: column;
@@ -207,4 +227,79 @@ footer button i, footer i {
     .footer__left {
         margin-bottom: 1rem;
     }
+}
+
+@media (max-width: 1000px) {
+    .header__nav {
+        text-align: center;
+    }
+
+    .header__nav__left,
+    .header__nav,
+    .header__nav__pages {
+        flex-direction: column;
+    }
+
+    .header__nav__pages {
+        margin: 1rem;
+    }
+
+    .header__nav__link {
+        margin: 1rem;
+        display: block;
+    }
+
+    .section__main {
+        margin: 0;
+    }
+
+    .header__nav__logo, .header__nav__pages, .header__nav__right {
+        margin: 1rem auto;
+    }
+
+    .header-search-mobile {
+        display: block;
+    }
+
+    .header__nav__search {
+        display: none;
+    }
+
+    .header__nav__right {
+        margin-top: 0;
+    }
+
+    .header-nav-menu-toggler {
+        display: block;
+    }
+
+    .header {
+        top: 20px;
+    }
+
+    .body-overlay::before {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-color: #2e2e2e7d;
+    }
+
+    body.body-overlay {
+        overflow: hidden;
+    }
+
+    body.body-overlay .header-nav-menu-toggler{
+        box-shadow: none;
+    }
+
+    .header__mobile {
+        position: absolute;
+        top: -100%;
+    }
+
 }
