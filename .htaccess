@@ -1,10 +1,4 @@
-DirectoryIndex  index.php index.html
-RewriteCond !/$
-RewriteCond !\.php$
+RewriteEngine on
 
-# Check if it's actually a dir and if index.html exists
-RewriteCond %{REQUEST_URI} -d
-RewriteCond %{REQUEST_URI}/index.php -f
+RewriteRule api/(.*)/ api/$1/index.php [L]
 
-# Rewrite anything that gets through (Probably insecure, but you get the idea)
-RewriteRule ^(.*)$ $1/index.php
